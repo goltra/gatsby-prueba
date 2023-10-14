@@ -25,11 +25,13 @@ jobs:
         run: npm run build
       - name: Verify build
         run: ls -la public
+      #https://github.com/marketplace/actions/ftp-deploy
       - name: Upload ftp
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_URL }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
+          local-dir: 'public/'
 
   

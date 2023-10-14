@@ -5,3 +5,6 @@ Proyecto para probar githubaction que haga un build y un deploy cuando llegue un
 El deploy se hace por ftp y los datos del ftp se configuran en secrets.
 
 Para hace upload por ftp usamos la action SamKirkland/FTP-Deploy-Action@v4.3.4
+
+La url publica para ver el deploy es https://gatsbypruebadeploy.goltratec.com
+

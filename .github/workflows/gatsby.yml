@@ -26,12 +26,10 @@ jobs:
       - name: Verify build
         run: ls -la public
       - name: Upload ftp
-        uses: genietim/ftp-action@releases/v4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          host: ${{ secrets.FTP_URL }}
-          user: ${{ secrets.FTP_USER }}
+          server: ${{ secrets.FTP_URL }}
+          username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
-          localDir: "public"
-          remoteDir: "/"
 
   
